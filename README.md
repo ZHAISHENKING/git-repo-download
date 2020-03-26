@@ -5,7 +5,7 @@
 
 ## 原理
 
-- 将目录中的 username repo branch rootPath提取出来
+- 将path中的 username repo branch rootPath提取出来
 - 拼接`https://api.github.com/repos/{username}/{repo}/contents?ref={branch}` 
 - axios.get 获取json
 - 遍历目录，拼接`https://raw.githubusercontent.com/{username}/{repo}/{branch}/{dir}`放入待下载队列
